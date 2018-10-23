@@ -1,0 +1,51 @@
+{
+    "enemy_data": {
+      "dragon1": {
+        "type": "boss_unit",
+        "position": {"x": 100, "y": 180},
+        "properties": {
+          "texture": "dragon_spritesheet",
+          "group": "enemy_units",
+          "scale": {"x": 0.7, "y": 0.7},
+          "anchor": {"x": 0.5, "y": 0.5},
+          "animations": {
+            "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+            "attack1": {"frames": [5, 6, 7, 8, 9, 10, 11, 0], "fps": 8},
+            "attack2": {"frames": [12, 13, 14, 15, 16, 17, 18, 19, 0], "fps": 9},
+            "hit": {"frames": [20, 21], "fps": 2}
+          },
+          "stats": {
+            "attack": 14,
+            "magic_attack": 10,
+            "defense": 7,
+            "health": 100,
+            "speed": 15
+          },
+          "target_units": "player_units"
+        }
+      },
+      "enemy_units_menu": {
+        "type": "menu",
+        "position": {"x": 10, "y": 350},
+        "properties": {
+          "group": "hud",
+          "menu_items": {
+            "snake1_item": {
+              "type": "enemy_menu_item",
+              "position": {"x": 10, "y": 360},
+              "properties": {
+                "group": "hud",
+                "texture": "dragon_face_image",
+                "scale": {"x": 0.5, "y": 0.5},
+                "enemy_name": "dragon1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "reward": {
+      "experience": 150,
+      "items": [{"type": "potion", "properties": {"group": "items", "item_texture": "potion_image", "health_power": 50}},{"type": "mana", "properties": {"group": "items", "item_texture": "mana_image", "mana_power": 50}}]
+    }
+  }

@@ -1,0 +1,7 @@
+{
+  "keydown": {
+    "ESC": {
+      "callback": "game_state.back_to_world"
+    }
+  }
+}

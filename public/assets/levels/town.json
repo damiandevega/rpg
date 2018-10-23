@@ -1,0 +1,49 @@
+{
+  "assets": {
+    "map_tileset": {"type": "image", "source": "assets/images/tileset.png"},
+
+    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/player.png", "frame_width": 16, "frame_height": 16},
+
+    "villager_image": {"type": "image", "source": "assets/images/world/villager.png"},
+    "guard_image": {"type": "image", "source": "assets/images/world/knight.png"},
+
+    "message_box_image": {"type": "image", "source": "assets/images/world/message_box.png"},
+    "warrior_helmet_image": {"type": "image", "source": "assets/images/world/warrior_helmet.png"},
+
+    "snake_image": {"type": "image", "source": "assets/images/world/snake.png"},
+    "reptile_image": {"type": "image", "source": "assets/images/world/snake.png"},
+    "dino_image": {"type": "image", "source": "assets/images/world/snake.png"},
+    "bat_image": {"type": "image", "source": "assets/images/world/bat.png"},
+    "slime_image": {"type": "image", "source": "assets/images/world/slime.png"},
+
+    "level_tilemap": {"type": "tilemap", "source": "assets/maps/town.json"}
+  },
+  "groups": [
+    "players",
+    "doors",
+    "npcs",
+    "enemy_spawners",
+    "hud",
+    "equipments"
+  ],
+  "map": {
+    "key": "level_tilemap",
+    "tilesets": ["map_tileset"]
+  },
+  "user_input": {
+    "world_map_user_input": "assets/user_inputs/world_map_user_input.json",
+    "talking_user_input": "assets/user_inputs/talking_user_input.json"
+  },
+  "initial_user_input": "world_map_user_input",
+  "npc_messages": {
+    "villager_message": "assets/npc_messages/villager_message.txt",
+    "guard_message": "assets/npc_messages/guard_message.txt"
+  },
+  "level_file": "assets/levels/town.json",
+  "enemy_encounters": {
+    "snake": "assets/enemy_encounters/snake.json",
+    "reptile": "assets/enemy_encounters/reptile.json",
+    "dino": "assets/enemy_encounters/dino.json",
+    "slime": "assets/enemy_encounters/slime.json"
+  }
+}

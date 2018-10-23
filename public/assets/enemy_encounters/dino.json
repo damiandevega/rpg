@@ -1,0 +1,83 @@
+{
+  "enemy_data": {
+    "dino1": {
+      "type": "enemy_unit",
+      "position": {"x": 100, "y": 180},
+      "properties": {
+        "texture": "dino_spritesheet",
+        "group": "enemy_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+          "attack1": {"frames": [5, 6, 7, 8, 9, 10, 11, 12, 13, 0], "fps": 10},
+          "attack2": {"frames": [14, 15, 16, 17, 0], "fps": 5},
+          "hit": {"frames": [18, 19], "fps": 2}
+        },
+        "stats": {
+          "attack": 13,
+          "defense": 14,
+          "health": 40,
+          "speed": 11
+        },
+        "target_units": "player_units"
+      }
+    },
+    "dino2": {
+      "type": "enemy_unit",
+      "position": {"x": 100, "y": 250},
+      "properties": {
+        "texture": "dino_spritesheet",
+        "group": "enemy_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+          "attack1": {"frames": [5, 6, 7, 8, 9, 10, 11, 12, 13, 0], "fps": 10},
+          "attack2": {"frames": [14, 15, 16, 17, 0], "fps": 5},
+          "hit": {"frames": [18, 19], "fps": 2}
+        },
+        "stats": {
+          "attack": 14,
+          "defense": 13,
+          "health": 45,
+          "speed": 10
+        },
+        "target_units": "player_units"
+      }
+    },
+    "enemy_units_menu": {
+      "type": "menu",
+      "position": {"x": 10, "y": 350},
+      "properties": {
+        "group": "hud",
+        "menu_items": {
+          "dino1_item": {
+            "type": "enemy_menu_item",
+            "position": {"x": 10, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "dino_face_image",
+              "scale": {"x": 0.5, "y": 0.5},
+              "enemy_name": "dino1"
+            }
+          },
+          "dino2_item": {
+            "type": "enemy_menu_item",
+            "position": {"x": 80, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "dino_face_image",
+              "scale": {"x": 0.5, "y": 0.5},
+              "enemy_name": "dino2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "reward": {
+    "experience": 100,
+    "items": [{"type": "potion", "properties": {"group": "items", "item_texture": "potion_image", "health_power": 50}}]
+  }
+}

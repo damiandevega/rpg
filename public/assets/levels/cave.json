@@ -1,0 +1,32 @@
+{
+  "assets": {
+    "map_tileset": {"type": "image", "source": "assets/images/tileset.png"},
+
+    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/player.png", "frame_width": 16, "frame_height": 16},
+
+    "bat_image": {"type": "image", "source": "assets/images/world/bat.png"},
+    "dragon_image": {"type": "image", "source": "assets/images/world/dragon.png"},
+
+    "level_tilemap": {"type": "tilemap", "source": "assets/maps/cave.json"}
+  },
+  "groups": [
+    "players",
+    "doors",
+    "enemy_spawners"
+  ],
+  "map": {
+    "key": "level_tilemap",
+    "tilesets": ["map_tileset"]
+  },
+  "user_input": {
+    "world_map_user_input": "assets/user_inputs/world_map_user_input.json",
+    "talking_user_input": "assets/user_inputs/talking_user_input.json"
+  },
+  "initial_user_input": "world_map_user_input",
+  "level_file": "assets/levels/cave.json",
+  "enemy_encounters": {
+    "snake": "assets/enemy_encounters/snake.json",
+    "bat": "assets/enemy_encounters/bat.json",
+    "dragon": "assets/enemy_encounters/dragon.json"
+  }
+}

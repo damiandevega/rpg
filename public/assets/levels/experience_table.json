@@ -1,0 +1,12 @@
+[
+  {"required_exp": 100, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 0}},
+  {"required_exp": 250, "stats_increase": {"attack": 1, "defense": 1, "speed": 0, "health": 1}},
+  {"required_exp": 500, "stats_increase": {"attack": 1, "defense": 0, "speed": 1, "health": 1}},
+  {"required_exp": 750, "stats_increase": {"attack": 0, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 1050, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 1350, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 1800, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 2350, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 3000, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}},
+  {"required_exp": 4000, "stats_increase": {"attack": 1, "defense": 1, "speed": 1, "health": 1}}
+]

@@ -1,0 +1,85 @@
+{
+    "assets": {        
+        "message_box_image": {"type": "image", "source": "assets/images/world/message_box.png"},
+        
+        "warrior_face_image": {"type": "image", "source": "assets/images/battle/warrior_face.png"},
+        "mage_face_image": {"type": "image", "source": "assets/images/battle/mage_face.png"},
+        
+        "healthbar_image": {"type": "image", "source": "assets/images/battle/healthbar.png"},
+        "manabar_image": {"type": "image", "source": "assets/images/battle/manabar.png"}
+    },
+    "groups": [
+        "unit_stats",
+        "background",
+        "hud"
+    ],
+    "prefabs": {
+        "background": {
+            "type": "background",
+            "position": {"x": 0, "y": 0},
+            "properties": {
+                "texture": "message_box_image",
+                "group": "background",
+                "scale": {"x": 1, "y": 4}
+            }
+        },
+        "warrior": {
+            "type": "unit_stats",
+            "position": {"x": 0, "y": 0},
+            "properties": {
+                "group": "unit_stats",
+                "texture": "",
+                "stats": {
+                    "attack": 20,
+                    "magic_attack": 5,
+                    "defense": 5,
+                    "health": 100,
+                    "mana": 100,
+                    "speed": 15
+                },
+                "face_texture": "warrior_face_image"
+            }
+        },
+        "mage": {
+            "type": "unit_stats",
+            "position": {"x": 0, "y": 0},
+            "properties": {
+                "group": "unit_stats",
+                "texture": "",
+                "stats": {
+                    "attack": 5,
+                    "magic_attack": 20,
+                    "defense": 2,
+                    "health": 100,
+                    "mana": 100,
+                    "speed": 10
+                },
+                "face_texture": "mage_face_image"
+            }
+        },
+        "show_warrior_unit": {
+            "type": "show_player_unit",
+            "position": {"x": 50, "y": 100},
+            "properties": {
+                "group": "hud",
+                "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
+                "prefab": "warrior",
+                "face_texture": "warrior_face_image"
+            }
+        },
+        "show_mage_unit": {
+            "type": "show_player_unit",
+            "position": {"x": 50, "y": 250},
+            "properties": {
+                "group": "hud",
+                "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
+                "prefab": "mage",
+                "face_texture": "mage_face_image"
+            }
+        }
+    },
+    "user_input": {
+        "pause_user_input": "assets/user_inputs/pause_user_input.json"
+    },
+    "initial_user_input": "pause_user_input"
+}

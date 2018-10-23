@@ -1,0 +1,42 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/battle/background.png"}
+  },
+  "groups": [
+    "background",
+    "items",
+    "texts"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
+    },
+    "title_message": {
+      "type": "text",
+      "position": {"x": 70, "y": 200},
+      "properties": {
+        "style": {"font": "65px Kells", "fill": "#000000"},
+        "text": "RPG Game",
+        "group": "texts"
+      }
+    },
+    "start_message": {
+      "type": "text",
+      "position": {"x": 220, "y": 360},
+      "properties": {
+        "style": {"font": "20px Kells", "fill": "#000000"},
+        "text": "Press Enter",
+        "group": "texts"
+      }
+    }
+  },
+  "user_input": {
+    "title_user_input": "assets/user_inputs/title_user_input.json"
+  },
+  "initial_user_input": "title_user_input"
+}

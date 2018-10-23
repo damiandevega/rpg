@@ -1,0 +1,56 @@
+{
+    "party_data": {
+        "warrior": {
+            "stats": {
+                "attack": 20,
+                "magic_attack": 5,
+                "defense": 5,
+                "health": 100,
+                "mana": 100,
+                "speed": 15
+            },
+            "stats_bonus": {
+                "attack": 0,
+                "magic_attack": 0,
+                "defense": 0,
+                "health": 0,
+                "mana": 0,
+                "speed": 0
+            },
+            "equipment": {
+                "head": {"name": "default_equipment", "texture": ""},
+                "body": {"name": "default_equipment", "texture": ""},
+                "legs": {"name": "default_equipment", "texture": ""},
+                "feet": {"name": "default_equipment", "texture": ""}
+            },
+            "experience": 0,
+            "current_level": 0
+        },
+        "mage": {
+            "stats": {
+                "attack": 5,
+                "magic_attack": 20,
+                "defense": 2,
+                "health": 100,
+                "mana": 100,
+                "speed": 10
+            },
+            "stats_bonus": {
+                "attack": 0,
+                "magic_attack": 0,
+                "defense": 0,
+                "health": 0,
+                "mana": 0,
+                "speed": 0
+            },
+            "equipment": {
+                "head": {"name": "default_equipment", "texture": ""},
+                "body": {"name": "default_equipment", "texture": ""},
+                "legs": {"name": "default_equipment", "texture": ""},
+                "feet": {"name": "default_equipment", "texture": ""}
+            },
+            "experience": 0,
+            "current_level": 0
+        }
+    }
+}

@@ -1,0 +1,174 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/battle/background.png"},
+    "icons_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/icons.png", "frame_width": 40, "frame_height": 40},
+
+    "warrior_face_image": {"type": "image", "source": "assets/images/battle/warrior_face.png"},
+    "mage_face_image": {"type": "image", "source": "assets/images/battle/mage_face.png"},
+
+    "healthbar_image": {"type": "image", "source": "assets/images/battle/healthbar.png"},
+    "manabar_image": {"type": "image", "source": "assets/images/battle/manabar.png"},
+
+    "potion_image": {"type": "image", "source": "assets/images/battle/health_potion.png"},
+    "mana_image": {"type": "image", "source": "assets/images/battle/mana_potion.png"},
+
+    "warrior_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/warrior.png", "frame_width": 240, "frame_height": 104},
+    "mage_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/mage.png", "frame_width": 151, "frame_height": 100},
+
+    "snake_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/snake.png", "frame_width": 147, "frame_height": 94},
+    "snake_face_image": {"type": "image", "source": "assets/images/battle/snake_face.png"},
+
+    "reptile_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/reptile.png", "frame_width": 248, "frame_height": 151},
+    "reptile_face_image": {"type": "image", "source": "assets/images/battle/reptile_face.png"},
+
+    "dino_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/dino.png", "frame_width": 154, "frame_height": 118},
+    "dino_face_image": {"type": "image", "source": "assets/images/battle/dino_face.png"},
+
+    "bat_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/bat.png", "frame_width": 121, "frame_height": 89},
+    "bat_face_image": {"type": "image", "source": "assets/images/battle/bat_face.png"},
+
+    "slime_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/slime.png", "frame_width": 141, "frame_height": 107},
+    "slime_face_image": {"type": "image", "source": "assets/images/battle/slime_face.png"},
+
+    "dragon_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/dragon.png", "frame_width": 258, "frame_height": 209},
+    "dragon_face_image": {"type": "image", "source": "assets/images/battle/dragon_face.png"}
+
+  },
+  "groups": [
+    "background",
+    "attacks",
+    "items",
+    "player_units",
+    "enemy_units",
+    "hud"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background",
+        "scale": {"x": 1.0, "y": 0.7}
+      }
+    },
+    "warrior": {
+      "type": "player_unit",
+      "position": {"x": 500, "y": 180},
+      "properties": {
+        "texture": "warrior_spritesheet",
+        "group": "player_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "target_units": "enemy_units",
+        "face_texture": "warrior_face_image",
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4, 5], "fps": 6},
+          "attack1": {"frames": [6, 7, 8, 9, 10, 11], "fps": 6},
+          "attack2": {"frames": [6, 7, 8, 9, 10, 11], "fps": 6},
+          "hit": {"frames": [16, 17], "fps": 2}
+        },
+        "stats": {
+          "attack": 20,
+          "magic_attack": 5,
+          "defense": 5,
+          "health": 100,
+          "mana": 100,
+          "speed": 15
+        }
+      }
+    },
+    "mage": {
+      "type": "player_unit",
+      "position": {"x": 500, "y": 250},
+      "properties": {
+        "texture": "mage_spritesheet",
+        "group": "player_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "target_units": "enemy_units",
+        "face_texture": "mage_face_image",
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+          "attack1": {"frames": [5, 6, 0], "fps": 3},
+          "attack2": {"frames": [7, 8, 9, 10, 11, 12, 13, 0], "fps": 8},
+          "hit": {"frames": [14, 15], "fps": 2}
+        },
+        "stats": {
+          "attack": 5,
+          "magic_attack": 20,
+          "defense": 2,
+          "health": 100,
+          "mana": 100,
+          "speed": 10
+        }
+      }
+    },
+    "actions_menu": {
+      "type": "menu",
+      "position": {"x": 202, "y": 300},
+      "properties": {
+        "group": "hud",
+        "menu_items": {
+          "attack": {
+            "type": "physical_attack_menu_item",
+            "position": {"x": 210, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "icons_spritesheet",
+              "frame": 13
+            }
+          },
+          "magic": {
+            "type": "magical_attack_menu_item",
+            "position": {"x": 250, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "icons_spritesheet",
+              "frame": 10
+            }
+          },
+          "item": {
+            "type": "inventory_menu_item",
+            "position": {"x": 290, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "icons_spritesheet",
+              "frame": 12
+            }
+          },
+          "run": {
+            "type": "run_menu_item",
+            "position": {"x": 330, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "icons_spritesheet",
+              "frame": 11,
+              "run_chance": 1.0
+            }
+          }
+        }
+      }
+    },
+    "show_player_unit": {
+      "type": "show_player_unit",
+      "position": {"x": 394, "y": 350},
+      "properties": {
+        "group": "hud",
+        "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
+        "prefab": "warrior",
+        "face_texture": "warrior_face_image"
+      }
+    },
+    "items_menu": {
+      "type": "menu",
+      "position": {"x": 202, "y": 350},
+      "properties": {
+        "group": "hud",
+        "menu_items": {
+
+        }
+      }
+    }
+  }
+}

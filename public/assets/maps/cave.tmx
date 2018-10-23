@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32" nextobjectid="7">
+ <tileset firstgid="1" name="tileset" tilewidth="32" tileheight="32" tilecount="240" columns="20">
+  <image source="../images/tileset.png" width="640" height="384"/>
+ </tileset>
+ <layer name="background" width="20" height="15">
+  <data encoding="csv">
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,
+30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30,30
+</data>
+ </layer>
+ <layer name="buildings" width="20" height="15">
+  <properties>
+   <property name="collision" type="bool" value="true"/>
+  </properties>
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+52,52,52,52,52,52,52,52,52,52,0,52,52,52,52,52,52,52,52,52
+</data>
+ </layer>
+ <objectgroup name="objects">
+  <object id="1" name="player" type="player" x="320" y="384" width="32" height="32">
+   <properties>
+    <property name="group" value="players"/>
+    <property name="texture" value="player_spritesheet"/>
+    <property name="walking_speed" type="int" value="50"/>
+   </properties>
+  </object>
+  <object id="2" name="door" type="door" x="320" y="446" width="32" height="32">
+   <properties>
+    <property name="group" value="doors"/>
+    <property name="next_level" value="assets/levels/town.json"/>
+    <property name="texture" value=""/>
+   </properties>
+  </object>
+  <object id="4" name="enemy_spawner1" type="enemy_spawner" x="191" y="320" width="32" height="32">
+   <properties>
+    <property name="encounter" value="snake"/>
+    <property name="group" value="enemy_spawners"/>
+    <property name="texture" value="snake_image"/>
+   </properties>
+  </object>
+  <object id="5" name="enemy_spawner2" type="enemy_spawner" x="95" y="127" width="32" height="32">
+   <properties>
+    <property name="encounter" value="bat"/>
+    <property name="group" value="enemy_spawners"/>
+    <property name="texture" value="bat_image"/>
+   </properties>
+  </object>
+  <object id="6" name="boss_spawner" type="enemy_spawner" x="543" y="31" width="32" height="32">
+   <properties>
+    <property name="encounter" value="dragon"/>
+    <property name="group" value="enemy_spawners"/>
+    <property name="texture" value="dragon_image"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

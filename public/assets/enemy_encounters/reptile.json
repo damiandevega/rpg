@@ -1,0 +1,83 @@
+{
+  "enemy_data": {
+    "reptile1": {
+      "type": "enemy_unit",
+      "position": {"x": 100, "y": 180},
+      "properties": {
+        "texture": "reptile_spritesheet",
+        "group": "enemy_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+          "attack1": {"frames": [6, 7, 8, 9, 10], "fps": 5},
+          "attack2": {"frames": [6, 7, 8, 9, 10], "fps": 5},
+          "hit": {"frames": [11, 12, 13, 14], "fps": 4}
+        },
+        "stats": {
+          "attack": 21,
+          "defense": 9,
+          "health": 50,
+          "speed": 13
+        },
+        "target_units": "player_units"
+      }
+    },
+    "reptile2": {
+      "type": "enemy_unit",
+      "position": {"x": 100, "y": 250},
+      "properties": {
+        "texture": "reptile_spritesheet",
+        "group": "enemy_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "animations": {
+          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
+          "attack1": {"frames": [6, 7, 8, 9, 10], "fps": 5},
+          "attack2": {"frames": [6, 7, 8, 9, 10], "fps": 5},
+          "hit": {"frames": [11, 12, 13, 14], "fps": 4}
+        },
+        "stats": {
+          "attack": 18,
+          "defense": 8,
+          "health": 45,
+          "speed": 15
+        },
+        "target_units": "player_units"
+      }
+    },
+    "enemy_units_menu": {
+      "type": "menu",
+      "position": {"x": 10, "y": 350},
+      "properties": {
+        "group": "hud",
+        "menu_items": {
+          "reptile1_item": {
+            "type": "enemy_menu_item",
+            "position": {"x": 10, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "reptile_face_image",
+              "scale": {"x": 0.5, "y": 0.5},
+              "enemy_name": "reptile1"
+            }
+          },
+          "reptile2_item": {
+            "type": "enemy_menu_item",
+            "position": {"x": 80, "y": 360},
+            "properties": {
+              "group": "hud",
+              "texture": "reptile_face_image",
+              "scale": {"x": 0.5, "y": 0.5},
+              "enemy_name": "reptile2"
+            }
+          }
+        }
+      }
+    }
+  },
+  "reward": {
+    "experience": 100,
+    "items": [{"type": "potion", "properties": {"group": "items", "item_texture": "potion_image", "health_power": 50}}]
+  }
+}

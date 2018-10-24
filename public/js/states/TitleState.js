@@ -61,13 +61,19 @@ RPG.TitleState.prototype.retrieve_data = function (snapshot) {
             this.game.inventory.collect_item(this, items[item_key], item_key);
         }
 
-        this.start_game();
+        // could pass in level_data based on saved data if level_data exists in user_data
+        this.start_game(user_data.level_data);
     }
 };
 
-RPG.TitleState.prototype.start_game = function () {
+RPG.TitleState.prototype.start_game = function (level_data) {
     "use strict";
-    this.game.state.start("BootState", true, false, "assets/levels/town.json", "WorldState");
+    // could use level_data to load last saved json
+    if (level_data) {
+        this.game.state.start("BootState", true, false, level_data.level_file, level_data.next_state);
+    } else {
+        this.game.state.start("BootState", true, false, "assets/levels/town.json", "WorldState");
+    }
 };
 
 RPG.TitleState.prototype.handle_error = function (error) {

@@ -22,5 +22,6 @@ RPG.Door.prototype.update = function() {
 
 RPG.Door.prototype.enter = function() {
     "use strict";
+    console.log('contact with door');
     this.game_state.game.state.start("BootState", true, false, this.next_level, "WorldState");
 };

@@ -87,9 +87,9 @@
                  "name":"enemy_spawner1",
                  "properties":
                     {
-                     "encounter":"snake",
+                     "encounter":"bat",
                      "group":"enemy_spawners",
-                     "texture":"snake_image"
+                     "texture":"bat_image"
                     },
                  "propertytypes":
                     {
@@ -165,7 +165,7 @@
         {
          "columns":20,
          "firstgid":1,
-         "image":"..\/images\/tileset.png",
+         "image":"..\/..\/..\/..\/..\/WebStorm\/projects\/phaser-rpg\/public\/assets\/images\/tileset.png",
          "imageheight":384,
          "imagewidth":640,
          "margin":0,

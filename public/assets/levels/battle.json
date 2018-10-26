@@ -13,7 +13,7 @@
     "mana_image": {"type": "image", "source": "assets/images/battle/mana_potion.png"},
 
     "warrior_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/warrior.png", "frame_width": 240, "frame_height": 104},
-    "mage_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/mage.png", "frame_width": 151, "frame_height": 100},
+    "mage_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/divine_mage/mage_spritesheet.png", "frame_width": 200, "frame_height": 200},
 
     "snake_spritesheet": {"type": "spritesheet", "source": "assets/images/battle/snake.png", "frame_width": 147, "frame_height": 94},
     "snake_face_image": {"type": "image", "source": "assets/images/battle/snake_face.png"},
@@ -89,10 +89,10 @@
         "target_units": "enemy_units",
         "face_texture": "mage_face_image",
         "animations": {
-          "idle": {"frames": [0, 1, 2, 3, 4], "fps": 5},
-          "attack1": {"frames": [5, 6, 0], "fps": 3},
-          "attack2": {"frames": [7, 8, 9, 10, 11, 12, 13, 0], "fps": 8},
-          "hit": {"frames": [14, 15], "fps": 2}
+          "idle": {"frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29], "fps": 30},
+          "attack1": {"frames": [42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59], "fps": 18},
+          "attack2": {"frames": [60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80], "fps": 21},
+          "hit": {"frames": [30,31,32,33,34,35,36,37,38,39,40,41], "fps": 12}
         },
         "stats": {
           "attack": 5,

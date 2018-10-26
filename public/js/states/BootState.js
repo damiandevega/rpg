@@ -18,20 +18,24 @@ RPG.BootState.prototype.init = function(level_file, next_state, extra_parameters
     this.next_state = next_state;
     this.extra_parameters = extra_parameters;
 
-    console.log('level_file', level_file);
-    console.log('next_state', next_state);
-    console.log('extra_parameters', extra_parameters);
-    if ((level_file !== 'assets/levels/battle.json' && next_state !== 'BattleState') || 
-        (level_file !== 'assets/levels/title_screen.json' && next_state !== 'TitleState')) {
-        // save level_data to db
-        var level_data = {
-            level_file: level_file,
-            next_state: next_state
-        }
-        if (firebase.auth().currentUser) {
-            firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/level_data")
-            .set(level_data);
-        }
+    switch (next_state) {
+        case "BattleState":
+            console.log("BattleState");
+            break;
+        case "TitleState":
+            console.log("TitleState");
+            break;
+        case "WorldState":
+            var level_data = {
+                level_file: level_file,
+                next_state: next_state
+            }
+            if (firebase.auth().currentUser) {
+                firebase.database().ref("/users/" + firebase.auth().currentUser.uid + "/level_data")
+                .set(level_data);
+            }
+            break;
+        default: console.log("Do nothing");
     }
 };
 

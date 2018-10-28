@@ -84,7 +84,7 @@
       "properties": {
         "texture": "mage_spritesheet",
         "group": "player_units",
-        "scale": {"x": 0.7, "y": 0.7},
+        "scale": {"x": 1, "y": 1},
         "anchor": {"x": 0.5, "y": 0.5},
         "target_units": "enemy_units",
         "face_texture": "mage_face_image",

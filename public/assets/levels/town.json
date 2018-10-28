@@ -2,7 +2,7 @@
   "assets": {
     "map_tileset": {"type": "image", "source": "assets/images/tileset.png"},
 
-    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/player.png", "frame_width": 16, "frame_height": 16},
+    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/assassin/assassin_spritesheet.png", "frame_width": 128, "frame_height": 128},
 
     "villager_image": {"type": "image", "source": "assets/images/world/villager.png"},
     "guard_image": {"type": "image", "source": "assets/images/world/knight.png"},

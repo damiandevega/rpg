@@ -112,6 +112,19 @@ RPG.BattleState.prototype.game_over = function () {
 
 RPG.BattleState.prototype.end_battle = function () {
     "use strict";
+
+    // for (var player_unit_name in this.game.party_data) {
+    //     var unit_data = this.game.party_data[player_unit_name];
+    //     var stats_bonus = this.game.party_data[player_unit_name].stats_bonus;
+    //     this.prefabs[player_unit_name].stats = {};
+    //     for (var stat_name in unit_data.stats) {
+    //         this.prefabs[player_unit_name].stats[stat_name] = unit_data.stats[stat_name] - stats_bonus[stat_name];
+    //     }
+        
+    //     this.prefabs[player_unit_name].experience = unit_data.experience;
+    //     this.prefabs[player_unit_name].current_level = unit_data.current_level;
+    // }
+
     var received_experience = this.encounter.reward.experience;
     this.groups.player_units.forEach(function (player_unit) {
         player_unit.receive_experience(received_experience / this.groups.player_units.children.length);

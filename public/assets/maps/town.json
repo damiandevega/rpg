@@ -66,11 +66,11 @@
                  "type":"player",
                  "visible":true,
                  "width":32,
-                 "x":304,
-                 "y":223
+                 "x":300,
+                 "y":200
                 }, 
                 {
-                 "height":9.37080969571943,
+                 "height":45.8285,
                  "id":3,
                  "name":"door",
                  "properties":
@@ -88,9 +88,9 @@
                  "rotation":0,
                  "type":"door",
                  "visible":true,
-                 "width":28.5264864068371,
-                 "x":577.947027186326,
-                 "y":54.1556767111177
+                 "width":88.3019,
+                 "x":546.339,
+                 "y":35.3884
                 }, 
                 {
                  "height":32,

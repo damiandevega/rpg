@@ -5,6 +5,7 @@ RPG.Player = function(game_state, name, position, properties) {
     RPG.Prefab.call(this, game_state, name, position, properties);
 
     this.anchor.setTo(0.5, 0.5);
+    this.scale.setTo(0.5, 0.5);
 
     this.walking_speed = +properties.walking_speed;
 
@@ -59,6 +60,7 @@ RPG.Player.prototype.update = function() {
     if (this.body.velocity.x === 0 && this.body.velocity.y === 0) {
         this.animations.stop();
         this.frame = this.stopped_frames[this.body.facing];
+        // console.log('frame', this.frame);
     }
 
 };

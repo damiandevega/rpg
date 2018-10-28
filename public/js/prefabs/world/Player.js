@@ -5,7 +5,7 @@ RPG.Player = function(game_state, name, position, properties) {
     RPG.Prefab.call(this, game_state, name, position, properties);
 
     this.anchor.setTo(0.5, 0.5);
-    this.scale.setTo(0.5, 0.5);
+    this.scale.setTo(0.4, 0.4);
 
     this.walking_speed = +properties.walking_speed;
 

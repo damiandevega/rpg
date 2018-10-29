@@ -6,6 +6,8 @@ RPG.EnemySpawner = function(game_state, name, position, properties) {
 
     this.anchor.setTo(0.5, 0.5);
 
+    this.position = position;
+
     this.encounter = JSON.parse(this.game_state.game.cache.getText(properties.encounter));
 
     this.game_state.physics.arcade.enable(this);
@@ -22,5 +24,9 @@ RPG.EnemySpawner.prototype.update = function() {
 
 RPG.EnemySpawner.prototype.spawn = function() {
     "use strict";
+
+    console.log(this.position);
+    console.log('TODO: pass position to battlestate or save last position to db');
+
     this.game_state.game.state.start("BootState", true, false, "assets/levels/battle.json", "BattleState", {previous_level: this.game_state.level_data.level_file, encounter: this.encounter});
 };

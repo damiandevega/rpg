@@ -21,6 +21,11 @@ RPG.LoadingState.prototype.init = function(level_data, next_state, extra_paramet
 RPG.LoadingState.prototype.preload = function() {
     "use strict";
     var assets = this.level_data.assets;
+
+    console.log('assets', assets);
+    console.log('extra_parameters', this.extra_parameters);
+    console.log("TODO: use previous level to map to what background_image to use");
+
     for (var asset_key in assets) {
         var asset = assets[asset_key];
         switch (asset.type) {

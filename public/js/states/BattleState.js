@@ -127,8 +127,12 @@ RPG.BattleState.prototype.end_battle = function () {
 
     var received_experience = this.encounter.reward.experience;
     this.groups.player_units.forEach(function (player_unit) {
-        player_unit.receive_experience(received_experience / this.groups.player_units.children.length);
-        
+        player_unit.receive_experience(received_experience / this.groups.player_units.children.length);        
+        var stats_bonus = this.game.party_data[player_unit.name].stats_bonus;
+        for (var stat_name in player_unit.stats) {
+            this.prefabs[player_unit.name].stats[stat_name] = player_unit.stats[stat_name] - stats_bonus[stat_name];
+        }
+
         this.game.party_data[player_unit.name].stats = player_unit.stats;
         this.game.party_data[player_unit.name].experience = player_unit.experience;
         this.game.party_data[player_unit.name].current_level = player_unit.current_level;

@@ -20,10 +20,11 @@ RPG.BootState.prototype.init = function(level_file, next_state, extra_parameters
 
     switch (next_state) {
         case "BattleState":
-            console.log("BattleState");
+            // console.log("BattleState");
+            console.log("TODO: change background image");
             break;
         case "TitleState":
-            console.log("TitleState");
+            // console.log("TitleState");
             break;
         case "WorldState":
             var level_data = {

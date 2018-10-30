@@ -63,22 +63,22 @@ RPG.WorldState.prototype.create = function() {
 RPG.WorldState.prototype.create_object = function(object) {
     "use strict";
 
-    console.log('objects', object);
+    // console.log('objects', object);
     switch (object.type) {
         case "player":
             // change player position based on db
-            console.log("TODO: change player position based on previous level");
+            // console.log("TODO: change player position based on previous level");
             // object.x = 200;
             // object.y = 100;
             break;
         case "equipment":
             // kill equipment if it already was picked up based on db
-            console.log("TODO: kill equipment if already picked up");
+            // console.log("TODO: kill equipment if already picked up");
             // object.y = 1000;
             break;
         case "enemy_spawner":
             // maybe remove enemy spawner after killing?
-            console.log("TODO: maybe remove enemy spawner after killing?");
+            // console.log("TODO: maybe remove enemy spawner after killing?");
             break;
     }
 

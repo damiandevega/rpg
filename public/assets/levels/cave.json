@@ -2,7 +2,7 @@
   "assets": {
     "map_tileset": {"type": "image", "source": "assets/images/tileset.png"},
 
-    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/assassin/assassin_spritesheet.png", "frame_width": 64, "frame_height": 80},
+    "player_spritesheet": {"type": "spritesheet", "source": "assets/images/world/assassin/assassin_spritesheet.png", "frame_width": 72, "frame_height": 80},
 
     "bat_image": {"type": "image", "source": "assets/images/world/bat.png"},
     "dragon_image": {"type": "image", "source": "assets/images/world/dragon.png"},

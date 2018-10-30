@@ -104,6 +104,32 @@
         }
       }
     },
+    "knight": {
+      "type": "player_unit",
+      "position": {"x": 460, "y": 150},
+      "properties": {
+        "texture": "warrior_spritesheet",
+        "group": "player_units",
+        "scale": {"x": 0.7, "y": 0.7},
+        "anchor": {"x": 0.5, "y": 0.5},
+        "target_units": "enemy_units",
+        "face_texture": "warrior_face_image",
+        "animations": {
+          "idle": {"frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29], "fps": 30},
+          "attack1": {"frames": [42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60], "fps": 19},
+          "attack2": {"frames": [61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76], "fps": 16},
+          "hit": {"frames": [30,31,32,33,34,35,36,37,38,39,40,41], "fps": 12}
+        },
+        "stats": {
+          "attack": 20,
+          "magic_attack": 5,
+          "defense": 5,
+          "health": 100,
+          "mana": 100,
+          "speed": 15
+        }
+      }
+    },
     "actions_menu": {
       "type": "menu",
       "position": {"x": 202, "y": 300},

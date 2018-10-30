@@ -57,9 +57,26 @@
                 "face_texture": "mage_face_image"
             }
         },
+        "knight": {
+            "type": "unit_stats",
+            "position": {"x": 0, "y": 0},
+            "properties": {
+                "group": "unit_stats",
+                "texture": "",
+                "stats": {
+                    "attack": 20,
+                    "magic_attack": 5,
+                    "defense": 5,
+                    "health": 100,
+                    "mana": 100,
+                    "speed": 15
+                },
+                "face_texture": "warrior_face_image"
+            }
+        },
         "show_warrior_unit": {
             "type": "show_player_unit",
-            "position": {"x": 50, "y": 100},
+            "position": {"x": 50, "y": 60},
             "properties": {
                 "group": "hud",
                 "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
@@ -69,12 +86,22 @@
         },
         "show_mage_unit": {
             "type": "show_player_unit",
-            "position": {"x": 50, "y": 250},
+            "position": {"x": 50, "y": 200},
             "properties": {
                 "group": "hud",
                 "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
                 "prefab": "mage",
                 "face_texture": "mage_face_image"
+            }
+        },
+        "show_knight_unit": {
+            "type": "show_player_unit",
+            "position": {"x": 50, "y": 340},
+            "properties": {
+                "group": "hud",
+                "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
+                "prefab": "warrior",
+                "face_texture": "warrior_face_image"
             }
         }
     },

@@ -28,6 +28,7 @@ RPG.PauseState.prototype.create = function () {
     for (var player_unit_name in this.game.party_data) {
         var unit_data = this.game.party_data[player_unit_name];
         var stats_bonus = this.game.party_data[player_unit_name].stats_bonus;
+        console.log(this.prefabs);
         this.prefabs[player_unit_name].stats = {};
         for (var stat_name in unit_data.stats) {
             this.prefabs[player_unit_name].stats[stat_name] = unit_data.stats[stat_name] + stats_bonus[stat_name];

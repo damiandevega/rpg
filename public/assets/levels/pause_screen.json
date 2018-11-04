@@ -4,6 +4,7 @@
         
         "warrior_face_image": {"type": "image", "source": "assets/images/battle/warrior_face.png"},
         "mage_face_image": {"type": "image", "source": "assets/images/battle/mage_face.png"},
+        "knight_face_image": {"type": "image", "source": "assets/images/battle/knight_face.png"},
         
         "healthbar_image": {"type": "image", "source": "assets/images/battle/healthbar.png"},
         "manabar_image": {"type": "image", "source": "assets/images/battle/manabar.png"}
@@ -71,7 +72,7 @@
                     "mana": 100,
                     "speed": 15
                 },
-                "face_texture": "warrior_face_image"
+                "face_texture": "knight_face_image"
             }
         },
         "show_warrior_unit": {
@@ -100,8 +101,8 @@
             "properties": {
                 "group": "hud",
                 "text_style": {"font": "14px Kells", "fill": "#FFFFFF"},
-                "prefab": "warrior",
-                "face_texture": "warrior_face_image"
+                "prefab": "knight",
+                "face_texture": "knight_face_image"
             }
         }
     },

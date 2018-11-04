@@ -5,6 +5,7 @@
 
     "warrior_face_image": {"type": "image", "source": "assets/images/battle/warrior_face.png"},
     "mage_face_image": {"type": "image", "source": "assets/images/battle/mage_face.png"},
+    "knight_face_image": {"type": "image", "source": "assets/images/battle/knight_face.png"},
 
     "healthbar_image": {"type": "image", "source": "assets/images/battle/healthbar.png"},
     "manabar_image": {"type": "image", "source": "assets/images/battle/manabar.png"},
@@ -114,7 +115,7 @@
         "scale": {"x": 0.5, "y": 0.5},
         "anchor": {"x": 0.5, "y": 0.5},
         "target_units": "enemy_units",
-        "face_texture": "warrior_face_image",
+        "face_texture": "knight_face_image",
         "animations": {
           "idle": {"frames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29], "fps": 30},
           "attack1": {"frames": [55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70], "fps": 16},

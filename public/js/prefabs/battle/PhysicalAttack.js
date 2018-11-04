@@ -17,6 +17,7 @@ RPG.PhysicalAttack.prototype.hit = function(target) {
 
     var damage = Math.max(0, Math.round((attack_multiplier * this.owner.stats.attack) - (defense_multiplier * target.stats.defense)));
 
+    console.log("TODO: make enemy receive damage after animation finishes");
     target.receive_damage(damage);
 
     this.owner.animations.play("attack1");

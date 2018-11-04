@@ -29,6 +29,9 @@ RPG.Inventory.prototype.collect_item = function (game_state, item_object, databa
 
 RPG.Inventory.prototype.create_menu = function (game_state, items_menu) {
     "use strict";
+    console.log(game_state);
+    console.log(items_menu);
+
     var item_position = new Phaser.Point(items_menu.x, items_menu.y);
     for (var item_type in this.items) {
         switch (item_type) {

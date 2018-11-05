@@ -30,6 +30,14 @@ RPG.LoadingState.prototype.preload = function() {
         var asset = assets[asset_key];
         switch (asset.type) {
             case "image":
+                if (this.next_state) {
+                    if (this.next_state === "BattleState") {
+                        if (asset.source === "assets/images/battle/background.png") {
+                            var background = battle_background_mapping.level[this.extra_parameters.previous_level];
+                            asset.source = background;
+                        }
+                    }
+                }
                 this.load.image(asset_key, asset.source);
                 break;
             case "spritesheet":

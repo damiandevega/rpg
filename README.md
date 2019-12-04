@@ -1,4 +1,5 @@
-# rpg
+# RPG
+
 retro role playing game using Phaser
 
 turn based fighting system
@@ -10,3 +11,5 @@ inventory system
 menu system
 
 Experience level json 
+
+Uses tilemap for tilesets

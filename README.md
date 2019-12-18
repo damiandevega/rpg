@@ -1,6 +1,6 @@
 # RPG
 
-retro role playing game using Phaser
+retro style role playing game using Phaser
 
 turn based fighting system
 
